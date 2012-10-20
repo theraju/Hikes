@@ -1,0 +1,508 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (100.6ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'WTAHikes_test.trails' doesn't exist: SHOW FULL FIELDS FROM `trails`
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.5ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (5.3ms)[0m  [1mINSERT INTO `trails` (`id`, `updated_at`, `created_at`) VALUES (298486374, '2012-10-09 04:35:31', '2012-10-09 04:35:31')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`id`, `updated_at`, `created_at`) VALUES (980190962, '2012-10-09 04:35:31', '2012-10-09 04:35:31')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`id`, `hash_key`, `name`, `updated_at`, `created_at`) VALUES (298486374, 'MyText', 'MyString', '2012-10-09 04:35:31', '2012-10-09 04:35:31')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`id`, `hash_key`, `name`, `updated_at`, `created_at`) VALUES (980190962, 'MyText', 'MyString', '2012-10-09 04:35:31', '2012-10-09 04:35:31')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (3.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`updated_at`, `id`, `created_at`) VALUES ('2012-10-10 16:19:43', 298486374, '2012-10-10 16:19:43')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `trails` (`updated_at`, `description`, `elevation_gain`, `photo_url`, `title`, `id`, `high_point`, `round_trip`, `vote_count`, `hash_key`, `created_at`, `region`, `avg_rating`) VALUES ('2012-10-10 16:19:43', 'This is a valid trail entry for \"testing\"', 2500, 'http://www.google.com', 'tiger3', 1063733086, 2.6, 11.24, 4, 'foobarhash', '2012-10-10 16:19:43', 'North Cascades, West Point', 4.5)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`updated_at`, `id`, `hash_key`, `name`, `created_at`) VALUES ('2012-10-10 16:19:43', 298486374, 'MyText', 'MyString', '2012-10-10 16:19:43')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`updated_at`, `id`, `hash_key`, `name`, `created_at`) VALUES ('2012-10-10 16:19:43', 980190962, 'MyText', 'MyString', '2012-10-10 16:19:43')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (1.5ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`created_at`, `id`, `updated_at`) VALUES ('2012-10-11 15:31:30', 298486374, '2012-10-11 15:31:30')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`high_point`, `photo_url`, `created_at`, `hash_key`, `avg_rating`, `region`, `title`, `id`, `updated_at`, `elevation_gain`, `vote_count`, `description`, `round_trip`) VALUES (2.6, 'http://www.google.com', '2012-10-11 15:31:30', 'foobarhash', 4.5, 'North Cascades, West Point', 'tiger3', 1063733086, '2012-10-11 15:31:30', 2500, 4, 'This is a valid trail entry for \"testing\"', 11.24)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`created_at`, `hash_key`, `name`, `id`, `updated_at`) VALUES ('2012-10-11 15:31:30', 'MyText', 'MyString', 980190962, '2012-10-11 15:31:30')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`created_at`, `hash_key`, `name`, `id`, `updated_at`) VALUES ('2012-10-11 15:31:30', 'MyText', 'MyString', 298486374, '2012-10-11 15:31:30')[0m
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `trails` (`updated_at`, `hash_key`, `photo_url`, `avg_rating`, `round_trip`, `created_at`, `high_point`, `vote_count`, `title`, `description`, `elevation_gain`, `id`, `region`) VALUES ('2012-10-11 15:38:50', 'foobarhash', 'http://www.google.com', 4.5, 11.24, '2012-10-11 15:38:50', 2.6, 4, 'tiger3', 'This is a valid trail entry for \"testing\"', 2500, 1063733086, 'North Cascades, West Point')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `trails` (`updated_at`, `created_at`, `id`) VALUES ('2012-10-11 15:38:50', '2012-10-11 15:38:50', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`updated_at`, `hash_key`, `name`, `created_at`, `id`) VALUES ('2012-10-11 15:38:50', 'MyText', 'MyString', '2012-10-11 15:38:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`updated_at`, `hash_key`, `name`, `created_at`, `id`) VALUES ('2012-10-11 15:38:50', 'MyText', 'MyString', '2012-10-11 15:38:50', 298486374)[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (6.6ms)[0m  [1mUPDATE `trails` SET `title` = NULL, `updated_at` = '2012-10-11 15:38:50' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.9ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.5ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`updated_at`, `id`, `created_at`) VALUES ('2012-10-11 15:56:53', 298486374, '2012-10-11 15:56:53')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `trails` (`updated_at`, `hash_key`, `high_point`, `region`, `id`, `title`, `created_at`, `photo_url`, `vote_count`, `elevation_gain`, `round_trip`, `avg_rating`, `description`) VALUES ('2012-10-11 15:56:53', 'foobarhash', 2.6, 'North Cascades, West Point', 1063733086, 'tiger3', '2012-10-11 15:56:53', 'http://www.google.com', 4, 2500, 11.24, 4.5, 'This is a valid trail entry for \"testing\"')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`updated_at`, `name`, `hash_key`, `id`, `created_at`) VALUES ('2012-10-11 15:56:53', 'MyString', 'MyText', 298486374, '2012-10-11 15:56:53')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`updated_at`, `name`, `hash_key`, `id`, `created_at`) VALUES ('2012-10-11 15:56:53', 'MyString', 'MyText', 980190962, '2012-10-11 15:56:53')[0m
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 5.0, `vote_count` = 0, `updated_at` = '2012-10-11 15:56:53' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mTrail Load (0.1ms)[0m  SELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.1ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `title` = NULL, `updated_at` = '2012-10-11 15:56:53' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 0.0, `vote_count` = 10, `updated_at` = '2012-10-11 15:56:53' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (7.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.1ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 0.0, `vote_count` = 0, `updated_at` = '2012-10-11 15:56:53' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`description`, `vote_count`, `id`, `created_at`, `elevation_gain`, `region`, `updated_at`, `hash_key`, `high_point`, `round_trip`, `photo_url`, `avg_rating`, `title`) VALUES ('This is a valid trail entry for \"testing\"', 4, 1063733086, '2012-10-11 15:59:11', 2500, 'North Cascades, West Point', '2012-10-11 15:59:11', 'foobarhash', 2.6, 11.24, 'http://www.google.com', 4.5, 'tiger3')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`id`, `created_at`, `updated_at`) VALUES (298486374, '2012-10-11 15:59:11', '2012-10-11 15:59:11')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`id`, `name`, `created_at`, `updated_at`, `hash_key`) VALUES (298486374, 'MyString', '2012-10-11 15:59:11', '2012-10-11 15:59:11', 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`id`, `name`, `created_at`, `updated_at`, `hash_key`) VALUES (980190962, 'MyString', '2012-10-11 15:59:11', '2012-10-11 15:59:11', 'MyText')[0m
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:11', `vote_count` = 0, `avg_rating` = 5.0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:11', `round_trip` = 0.0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mTrail Load (0.1ms)[0m  SELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE `trails` SET `updated_at` = '2012-10-11 15:59:11', `title` = NULL WHERE `trails`.`id` = 1063733086
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mTrail Load (0.2ms)[0m  SELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE `trails` SET `updated_at` = '2012-10-11 15:59:11', `vote_count` = 10, `avg_rating` = 0.0 WHERE `trails`.`id` = 1063733086
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mTrail Load (0.2ms)[0m  SELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE `trails` SET `updated_at` = '2012-10-11 15:59:11', `vote_count` = 0, `avg_rating` = 0.0 WHERE `trails`.`id` = 1063733086
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `trails` (`updated_at`, `description`, `title`, `id`, `region`, `photo_url`, `vote_count`, `avg_rating`, `high_point`, `round_trip`, `elevation_gain`, `created_at`, `hash_key`) VALUES ('2012-10-11 15:59:31', 'This is a valid trail entry for \"testing\"', 'tiger3', 1063733086, 'North Cascades, West Point', 'http://www.google.com', 4, 4.5, 2.6, 11.24, 2500, '2012-10-11 15:59:31', 'foobarhash')[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO `trails` (`updated_at`, `id`, `created_at`) VALUES ('2012-10-11 15:59:31', 298486374, '2012-10-11 15:59:31')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`updated_at`, `id`, `name`, `created_at`, `hash_key`) VALUES ('2012-10-11 15:59:31', 980190962, 'MyString', '2012-10-11 15:59:31', 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `features` (`updated_at`, `id`, `name`, `created_at`, `hash_key`) VALUES ('2012-10-11 15:59:31', 298486374, 'MyString', '2012-10-11 15:59:31', 'MyText')[0m
+  [1m[35m (113.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:31', `avg_rating` = 5.0, `vote_count` = 0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:31', `round_trip` = 0.0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:31', `hash_key` = NULL WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:31', `title` = NULL WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:31', `avg_rating` = 0.0, `vote_count` = 10 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-11 15:59:31', `avg_rating` = 0.0, `vote_count` = 0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `trails` (`created_at`, `description`, `round_trip`, `title`, `region`, `updated_at`, `high_point`, `elevation_gain`, `vote_count`, `photo_url`, `id`, `avg_rating`, `hash_key`) VALUES ('2012-10-11 16:04:19', 'This is a valid trail entry for \"testing\"', 11.24, 'tiger3', 'North Cascades, West Point', '2012-10-11 16:04:19', 2.6, 2500, 4, 'http://www.google.com', 1063733086, 4.5, 'foobarhash')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `trails` (`created_at`, `updated_at`, `id`) VALUES ('2012-10-11 16:04:19', '2012-10-11 16:04:19', 298486374)
+  [1m[36mFixture Delete (1.4ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`created_at`, `updated_at`, `name`, `id`, `hash_key`) VALUES ('2012-10-11 16:04:19', '2012-10-11 16:04:19', 'MyString', 980190962, 'MyText')
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFeature Load (0.4ms)[0m  SELECT `features`.* FROM `features` WHERE `features`.`id` = 980190962 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  UPDATE `features` SET `hash_key` = NULL, `updated_at` = '2012-10-11 16:04:19' WHERE `features`.`id` = 980190962
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFeature Load (0.3ms)[0m  SELECT `features`.* FROM `features` WHERE `features`.`id` = 980190962 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE `features` SET `name` = NULL, `updated_at` = '2012-10-11 16:04:19' WHERE `features`.`id` = 980190962
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.5ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `trails` (`photo_url`, `vote_count`, `elevation_gain`, `region`, `id`, `updated_at`, `round_trip`, `hash_key`, `high_point`, `created_at`, `description`, `title`, `avg_rating`) VALUES ('http://www.google.com', 4, 2500, 'North Cascades, West Point', 1063733086, '2012-10-12 05:01:30', 11.24, 'foobarhash', 2.6, '2012-10-12 05:01:30', 'This is a valid trail entry for \"testing\"', 'tiger3', 4.5)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`id`, `updated_at`, `created_at`) VALUES (298486374, '2012-10-12 05:01:30', '2012-10-12 05:01:30')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`name`, `id`, `updated_at`, `hash_key`, `created_at`) VALUES ('MyString', 980190962, '2012-10-12 05:01:30', 'MyText', '2012-10-12 05:01:30')
+Mysql2::Error: Table 'WTAHikes_test.regions' doesn't exist: SHOW FULL FIELDS FROM `regions`
+  [1m[36m (4.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `trails` (`photo_url`, `vote_count`, `elevation_gain`, `region`, `id`, `updated_at`, `round_trip`, `hash_key`, `high_point`, `created_at`, `description`, `title`, `avg_rating`) VALUES ('http://www.google.com', 4, 2500, 'North Cascades, West Point', 1063733086, '2012-10-12 05:01:30', 11.24, 'foobarhash', 2.6, '2012-10-12 05:01:30', 'This is a valid trail entry for \"testing\"', 'tiger3', 4.5)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`id`, `updated_at`, `created_at`) VALUES (298486374, '2012-10-12 05:01:30', '2012-10-12 05:01:30')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`name`, `id`, `updated_at`, `hash_key`, `created_at`) VALUES ('MyString', 980190962, '2012-10-12 05:01:30', 'MyText', '2012-10-12 05:01:30')
+Mysql2::Error: Table 'WTAHikes_test.regions' doesn't exist: SHOW FULL FIELDS FROM `regions`
+  [1m[36m (2.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `trails` (`created_at`, `updated_at`, `id`) VALUES ('2012-10-12 05:01:45', '2012-10-12 05:01:45', 298486374)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`created_at`, `elevation_gain`, `updated_at`, `vote_count`, `description`, `high_point`, `avg_rating`, `id`, `round_trip`, `photo_url`, `region`, `title`, `hash_key`) VALUES ('2012-10-12 05:01:45', 2500, '2012-10-12 05:01:45', 4, 'This is a valid trail entry for \"testing\"', 2.6, 4.5, 1063733086, 11.24, 'http://www.google.com', 'North Cascades, West Point', 'tiger3', 'foobarhash')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`created_at`, `updated_at`, `name`, `id`, `hash_key`) VALUES ('2012-10-12 05:01:45', '2012-10-12 05:01:45', 'MyString', 980190962, 'MyText')
+Mysql2::Error: Table 'WTAHikes_test.regions' doesn't exist: SHOW FULL FIELDS FROM `regions`
+  [1m[36m (1.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`created_at`, `updated_at`, `id`) VALUES ('2012-10-12 05:01:45', '2012-10-12 05:01:45', 298486374)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `trails` (`created_at`, `elevation_gain`, `updated_at`, `vote_count`, `description`, `high_point`, `avg_rating`, `id`, `round_trip`, `photo_url`, `region`, `title`, `hash_key`) VALUES ('2012-10-12 05:01:45', 2500, '2012-10-12 05:01:45', 4, 'This is a valid trail entry for \"testing\"', 2.6, 4.5, 1063733086, 11.24, 'http://www.google.com', 'North Cascades, West Point', 'tiger3', 'foobarhash')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`created_at`, `updated_at`, `name`, `id`, `hash_key`) VALUES ('2012-10-12 05:01:45', '2012-10-12 05:01:45', 'MyString', 980190962, 'MyText')
+Mysql2::Error: Table 'WTAHikes_test.regions' doesn't exist: SHOW FULL FIELDS FROM `regions`
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `trails` (`updated_at`, `id`, `created_at`) VALUES ('2012-10-12 05:02:12', 298486374, '2012-10-12 05:02:12')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `trails` (`region`, `updated_at`, `title`, `photo_url`, `avg_rating`, `description`, `vote_count`, `id`, `high_point`, `created_at`, `elevation_gain`, `hash_key`, `round_trip`) VALUES ('North Cascades, West Point', '2012-10-12 05:02:12', 'tiger3', 'http://www.google.com', 4.5, 'This is a valid trail entry for \"testing\"', 4, 1063733086, 2.6, '2012-10-12 05:02:12', 2500, 'foobarhash', 11.24)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`updated_at`, `id`, `created_at`, `name`, `hash_key`) VALUES ('2012-10-12 05:02:12', 980190962, '2012-10-12 05:02:12', 'MyString', 'MyText')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `regions` (`updated_at`, `id`, `created_at`, `name`, `hash_key`) VALUES ('2012-10-12 05:02:12', 298486374, '2012-10-12 05:02:12', 'MyString', 'MyText')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `regions` (`updated_at`, `id`, `created_at`, `name`, `hash_key`) VALUES ('2012-10-12 05:02:12', 980190962, '2012-10-12 05:02:12', 'MyString', 'MyText')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRegion Load (0.4ms)[0m  [1mSELECT `regions`.* FROM `regions` WHERE `regions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `regions` SET `updated_at` = '2012-10-12 05:02:12', `hash_key` = NULL WHERE `regions`.`id` = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRegion Load (0.3ms)[0m  [1mSELECT `regions`.* FROM `regions` WHERE `regions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `regions` SET `updated_at` = '2012-10-12 05:02:12', `name` = NULL WHERE `regions`.`id` = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.6ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `trails` (`id`, `created_at`, `photo_url`, `high_point`, `elevation_gain`, `hash_key`, `updated_at`, `avg_rating`, `title`, `round_trip`, `description`, `region`, `vote_count`) VALUES (1063733086, '2012-10-12 05:02:26', 'http://www.google.com', 2.6, 2500, 'foobarhash', '2012-10-12 05:02:26', 4.5, 'tiger3', 11.24, 'This is a valid trail entry for \"testing\"', 'North Cascades, West Point', 4)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `trails` (`id`, `created_at`, `updated_at`) VALUES (298486374, '2012-10-12 05:02:26', '2012-10-12 05:02:26')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`id`, `created_at`, `hash_key`, `updated_at`, `name`) VALUES (980190962, '2012-10-12 05:02:26', 'MyText', '2012-10-12 05:02:26', 'MyString')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `regions` (`id`, `created_at`, `hash_key`, `updated_at`, `name`) VALUES (980190962, '2012-10-12 05:02:26', 'MyText', '2012-10-12 05:02:26', 'MyString')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `regions` (`id`, `created_at`, `hash_key`, `updated_at`, `name`) VALUES (298486374, '2012-10-12 05:02:26', 'MyText', '2012-10-12 05:02:26', 'MyString')[0m
+  [1m[35m (4.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFeature Load (0.2ms)[0m  [1mSELECT `features`.* FROM `features` WHERE `features`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `features` SET `hash_key` = NULL, `updated_at` = '2012-10-12 05:02:26' WHERE `features`.`id` = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFeature Load (0.3ms)[0m  [1mSELECT `features`.* FROM `features` WHERE `features`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mUPDATE `features` SET `name` = NULL, `updated_at` = '2012-10-12 05:02:26' WHERE `features`.`id` = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.4ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `trails` (`elevation_gain`, `photo_url`, `id`, `description`, `title`, `created_at`, `high_point`, `round_trip`, `region`, `avg_rating`, `hash_key`, `updated_at`, `vote_count`) VALUES (2500, 'http://www.google.com', 1063733086, 'This is a valid trail entry for \"testing\"', 'tiger3', '2012-10-12 05:10:39', 2.6, 11.24, 'North Cascades, West Point', 4.5, 'foobarhash', '2012-10-12 05:10:39', 4)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`id`, `created_at`, `updated_at`) VALUES (298486374, '2012-10-12 05:10:39', '2012-10-12 05:10:39')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `features` (`id`, `name`, `created_at`, `hash_key`, `updated_at`) VALUES (980190962, 'MyString', '2012-10-12 05:10:39', 'MyText', '2012-10-12 05:10:39')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `regions` (`id`, `name`, `created_at`, `hash_key`, `updated_at`) VALUES (980190962, 'MyString', '2012-10-12 05:10:39', 'MyText', '2012-10-12 05:10:39')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `regions` (`id`, `name`, `created_at`, `hash_key`, `updated_at`) VALUES (298486374, 'MyString', '2012-10-12 05:10:39', 'MyText', '2012-10-12 05:10:39')[0m
+  [1m[35m (103.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mRegion Load (0.2ms)[0m  [1mSELECT `regions`.* FROM `regions` WHERE `regions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRegion Load (0.1ms)[0m  SELECT `regions`.* FROM `regions` WHERE `regions`.`id` = 980190962 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  UPDATE `regions` SET `name` = NULL, `updated_at` = '2012-10-12 05:10:39' WHERE `regions`.`id` = 980190962
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `trails` (`id`, `updated_at`, `created_at`) VALUES (298486374, '2012-10-12 05:11:16', '2012-10-12 05:11:16')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `trails` (`avg_rating`, `elevation_gain`, `hash_key`, `description`, `region`, `vote_count`, `high_point`, `round_trip`, `id`, `updated_at`, `created_at`, `photo_url`, `title`) VALUES (4.5, 2500, 'foobarhash', 'This is a valid trail entry for \"testing\"', 'North Cascades, West Point', 4, 2.6, 11.24, 1063733086, '2012-10-12 05:11:16', '2012-10-12 05:11:16', 'http://www.google.com', 'tiger3')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `features` (`hash_key`, `name`, `id`, `updated_at`, `created_at`) VALUES ('MyText', 'MyString', 980190962, '2012-10-12 05:11:16', '2012-10-12 05:11:16')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `regions` (`hash_key`, `name`, `id`, `updated_at`, `created_at`) VALUES ('MyText', 'MyString', 980190962, '2012-10-12 05:11:16', '2012-10-12 05:11:16')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `regions` (`hash_key`, `name`, `id`, `updated_at`, `created_at`) VALUES ('MyText', 'MyString', 298486374, '2012-10-12 05:11:16', '2012-10-12 05:11:16')[0m
+  [1m[35m (104.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mRegion Load (0.2ms)[0m  [1mSELECT `regions`.* FROM `regions` WHERE `regions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mRegion Load (0.1ms)[0m  SELECT `regions`.* FROM `regions` WHERE `regions`.`id` = 980190962 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`created_at`, `id`, `updated_at`) VALUES ('2012-10-12 05:11:54', 298486374, '2012-10-12 05:11:54')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`elevation_gain`, `region`, `hash_key`, `high_point`, `created_at`, `title`, `vote_count`, `avg_rating`, `description`, `id`, `updated_at`, `round_trip`, `photo_url`) VALUES (2500, 'North Cascades, West Point', 'foobarhash', 2.6, '2012-10-12 05:11:54', 'tiger3', 4, 4.5, 'This is a valid trail entry for \"testing\"', 1063733086, '2012-10-12 05:11:54', 11.24, 'http://www.google.com')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `features` (`hash_key`, `created_at`, `name`, `id`, `updated_at`) VALUES ('MyText', '2012-10-12 05:11:54', 'MyString', 980190962, '2012-10-12 05:11:54')
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `regions` (`hash_key`, `created_at`, `name`, `id`, `updated_at`) VALUES ('MyText', '2012-10-12 05:11:54', 'MyString', 298486374, '2012-10-12 05:11:54')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `regions` (`hash_key`, `created_at`, `name`, `id`, `updated_at`) VALUES ('MyText', '2012-10-12 05:11:54', 'MyString', 980190962, '2012-10-12 05:11:54')[0m
+  [1m[35m (4.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFeature Load (0.2ms)[0m  [1mSELECT `features`.* FROM `features` WHERE `features`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFeature Load (0.1ms)[0m  SELECT `features`.* FROM `features` WHERE `features`.`id` = 980190962 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `trails` (`updated_at`, `description`, `elevation_gain`, `title`, `id`, `high_point`, `avg_rating`, `photo_url`, `vote_count`, `hash_key`, `round_trip`, `created_at`, `region`) VALUES ('2012-10-12 16:13:39', 'This is a valid trail entry for \"testing\"', 2500, 'tiger3', 1063733086, 2.6, 4.5, 'http://www.google.com', 4, 'foobarhash', 11.24, '2012-10-12 16:13:39', 'North Cascades, West Point')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `trails` (`updated_at`, `id`, `created_at`) VALUES ('2012-10-12 16:13:39', 298486374, '2012-10-12 16:13:39')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`updated_at`, `id`, `name`, `hash_key`, `created_at`) VALUES ('2012-10-12 16:13:39', 980190962, 'MyString', 'MyText', '2012-10-12 16:13:39')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `regions` (`updated_at`, `id`, `name`, `hash_key`, `created_at`) VALUES ('2012-10-12 16:13:39', 980190962, 'MyString', 'MyText', '2012-10-12 16:13:39')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `regions` (`updated_at`, `id`, `name`, `hash_key`, `created_at`) VALUES ('2012-10-12 16:13:39', 298486374, 'MyString', 'MyText', '2012-10-12 16:13:39')[0m
+  [1m[35m (105.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 0.0, `updated_at` = '2012-10-12 16:13:39', `vote_count` = 10 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (3.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-12 16:13:39', `round_trip` = -1.0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-12 16:13:39', `round_trip` = 0.0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `updated_at` = '2012-10-12 16:13:39', `hash_key` = NULL WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `trails` SET `title` = NULL, `updated_at` = '2012-10-12 16:13:39' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 0.0, `updated_at` = '2012-10-12 16:13:39', `vote_count` = 0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `trails`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `trails` (`id`, `updated_at`, `region`, `photo_url`, `elevation_gain`, `round_trip`, `hash_key`, `title`, `high_point`, `vote_count`, `avg_rating`, `created_at`, `description`) VALUES (1063733086, '2012-10-12 16:14:19', 'North Cascades, West Point', 'http://www.google.com', 2500, 11.24, 'foobarhash', 'tiger3', 2.6, 4, 4.5, '2012-10-12 16:14:19', 'This is a valid trail entry for \"testing\"')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `trails` (`id`, `updated_at`, `created_at`) VALUES (298486374, '2012-10-12 16:14:19', '2012-10-12 16:14:19')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `features`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `features` (`id`, `updated_at`, `name`, `hash_key`, `created_at`) VALUES (980190962, '2012-10-12 16:14:19', 'MyString', 'MyText', '2012-10-12 16:14:19')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `regions`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `regions` (`id`, `updated_at`, `name`, `hash_key`, `created_at`) VALUES (980190962, '2012-10-12 16:14:19', 'MyString', 'MyText', '2012-10-12 16:14:19')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `regions` (`id`, `updated_at`, `name`, `hash_key`, `created_at`) VALUES (298486374, '2012-10-12 16:14:19', 'MyString', 'MyText', '2012-10-12 16:14:19')[0m
+  [1m[35m (105.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 0.0, `updated_at` = '2012-10-12 16:14:19', `vote_count` = 10 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `round_trip` = -1.0, `updated_at` = '2012-10-12 16:14:19' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `round_trip` = 0.0, `updated_at` = '2012-10-12 16:14:19' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `hash_key` = NULL, `updated_at` = '2012-10-12 16:14:19' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.3ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `title` = NULL, `updated_at` = '2012-10-12 16:14:19' WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mTrail Load (0.2ms)[0m  [1mSELECT `trails`.* FROM `trails` WHERE `trails`.`id` = 1063733086 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE `trails` SET `avg_rating` = 0.0, `updated_at` = '2012-10-12 16:14:19', `vote_count` = 0 WHERE `trails`.`id` = 1063733086[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m

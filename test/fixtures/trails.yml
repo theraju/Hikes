@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+tiger3:
+    hash_key: foobarhash
+    title: tiger3
+    avg_rating: 4.5
+    vote_count: 4
+    photo_url: http://www.google.com
+    region: North Cascades, West Point
+    round_trip: 11.24
+    elevation_gain: 2500
+    high_point: 2.6
+    description: This is a valid trail entry for "testing"
+
+# column: value
+#
+two: {}
+#  column: value
