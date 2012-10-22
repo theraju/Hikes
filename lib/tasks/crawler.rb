@@ -5,18 +5,41 @@ require 'anemone'
 
 Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
     anemone.on_every_page { |page| 
-        puts page.url 
 
         #stuff that can be gleaned from the summary page
         #features list: div id="filter-features", input name="features:list" innertext
+        #regions and subregions: regex match the "select name=region part"
+        
+        if (page.url.to_s.scan(%r|hikes$|).length > 0)
+            puts page.url
 
-        #hike data: tr class="hike-row"
-        #within:
-           #title: a class="hike-title" innertext
-           #avg_rating: div class="current-rating" innertext
-           #vote_count: span class="VoteCount" innertext
-           #photo_url: a class="photo", within that img src
+            #hike data: tr class="hike-row"
+            doc = Nokogiri::HTML(open(page.url))
+            hikes_on_page = doc.css('tr[class=hike-row]')
+            hikes_on_page.each { |hike|
 
+            #within:
+               #title: a class="hike-title" innertext
+               title = hike.css('a.hike-title').first.content
+               puts title
+
+               #avg_rating: div class="current-rating" innertext
+               avg_rating = hike.css('div.current-rating').first.content
+               puts avg_rating
+
+               #vote_count: span class="VoteCount" innertext
+               vote_count = hike.css('span.VoteCount').first.content
+               puts vote_count
+
+               #photo_url: a class="photo", within that img src
+               photo_url = hike.css('a.photo').first
+
+               if !photo_url.nil?
+                   photo_link = photo_url.at_css('img')['src']
+                   puts photo_link
+               end
+            }
+        end
 
 
 
@@ -40,7 +63,7 @@ Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
         
         if (!next_link.nil?)
             uri = URI.parse(next_link.children().at_css('a')['href'])
-            follow << uri
+            # follow << uri
         end
 
         next follow
