@@ -1,3 +1,4 @@
+task :crawl => :environment do
 require 'rubygems'
 puts Gem.path
 require 'nokogiri'
@@ -5,12 +6,6 @@ require 'open-uri'
 require 'anemone'
 require 'digest/sha1'
 
-def get_trail_with(title)
-    trail = Trail.find(title)
-    if (trail == nil)
-        trail = new Trail
-    end
-end
 
 Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
     anemone.on_every_page { |page| 
@@ -40,7 +35,7 @@ Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
                puts title
                # hash_key = Digest::SHA1.hexdigest title
 
-               trail = get_trail_with title 
+               trail = Trail.find_or_initialize_by_title(title)
 
                #avg_rating: div class="current-rating" innertext
                avg_rating = hike.css('div.current-rating').first.content
@@ -72,10 +67,10 @@ Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
            puts detail_title
            # puts Digest::SHA1.hexdigest detail_title
 
-           trail = get_trail_with title
+           trail = Trail.find_or_initialize_by_title(detail_title)
 
            desc = doc.css('div.hike-full-description').first.content
-           trail.desc = desc
+           trail.description = desc
 
            #roundtrip, eleveation gain and high point: table class="stats-table" td label-cell is name, td data-cell is value
            #Labels are "Roundtrip", "Elevation gain" and "Highest point"
@@ -121,4 +116,5 @@ Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
 
         next follow
     }
+end
 end

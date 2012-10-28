@@ -1,7 +1,6 @@
 class CreateTrails < ActiveRecord::Migration
   def change
     create_table :trails do |t|
-      t.text :hash_key
       t.string :title
       t.decimal :avg_rating, :precision => 3, :scale => 2
       t.integer :vote_count
@@ -12,5 +11,6 @@ class CreateTrails < ActiveRecord::Migration
       t.text :description
       t.timestamps
     end
+    execute "alter table trails modify column hash_key string primary key"
   end
 end
