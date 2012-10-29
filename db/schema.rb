@@ -13,10 +13,14 @@
 ActiveRecord::Schema.define(:version => 20121012044644) do
 
   create_table "features", :force => true do |t|
-    t.text     "hash_key"
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "features_trails", :id => false, :force => true do |t|
+    t.integer "feature_id"
+    t.integer "trail_id"
   end
 
   create_table "regions", :force => true do |t|
@@ -27,23 +31,16 @@ ActiveRecord::Schema.define(:version => 20121012044644) do
   end
 
   create_table "trails", :force => true do |t|
-    t.text     "hash_key"
     t.string   "title"
     t.decimal  "avg_rating",     :precision => 3, :scale => 2
     t.integer  "vote_count"
     t.string   "photo_url"
-    t.string   "region"
     t.decimal  "round_trip",     :precision => 6, :scale => 2
     t.decimal  "elevation_gain", :precision => 6, :scale => 2
     t.decimal  "high_point",     :precision => 6, :scale => 2
     t.text     "description"
     t.datetime "created_at",                                   :null => false
     t.datetime "updated_at",                                   :null => false
-  end
-
-  create_table "trails_features", :id => false, :force => true do |t|
-    t.integer "trails_id"
-    t.integer "features_id"
   end
 
 end

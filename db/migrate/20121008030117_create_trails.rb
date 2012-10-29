@@ -11,6 +11,5 @@ class CreateTrails < ActiveRecord::Migration
       t.text :description
       t.timestamps
     end
-    execute "alter table trails modify column hash_key string primary key"
   end
 end

@@ -16,15 +16,6 @@ Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
         if (page.url.to_s.scan(%r|hikes$|).length > 0)
             puts page.url
         
-            #stuff that can be gleaned from the summary page
-            #features list: div id="filter-features", input name="features:list" innertext
-            features = doc.css('#filter-features')
-            features.css('input[type=checkbox]').each { |featuretag|
-                puts featuretag.content
-            }
-
-            #regions and subregions: regex match the "select name=region part"
-
             #hike data: tr class="hike-row"
             hikes_on_page = doc.css('tr[class=hike-row]')
             hikes_on_page.each { |hike|
@@ -54,6 +45,24 @@ Anemone.crawl("http://www.wta.org/go-hiking/hikes") do |anemone|
                    photo_link = photo_url.at_css('img')['src']
                    puts photo_link
                    trail.photo_url = photo_link
+               end
+
+               # td class cell-metadata, ul->li <label> is Features: <span> is feature values comma separated
+               metadata = hike.css('td.cell-metadata').first
+               list = metadata.css('ul').first
+               
+#new hikes dont have this info
+               if list && list.css('li')
+                   list_items = list.css('li')
+                   list_items.each { |each_item|
+                    if (each_item.css('label').inner_text.include? 'Features')
+                        features = each_item.css('span').inner_text.split(',')
+                        features.each { |feature|
+                            feature_model = Feature.find_by_name(feature.strip)
+                            trail.features << feature_model
+                        }
+                    end
+                   }
                end
 
                trail.save
