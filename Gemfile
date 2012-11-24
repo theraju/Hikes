@@ -25,6 +25,8 @@ gem 'jquery-rails'
 
 gem "nokogiri", '1.4.4', :require => "nokogiri"
 gem 'anemone'
+gem "squeel"
+# gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
