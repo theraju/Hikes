@@ -1,0 +1,2 @@
+module TrailHelper
+end
