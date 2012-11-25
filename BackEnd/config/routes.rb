@@ -1,4 +1,7 @@
 WTAHikes::Application.routes.draw do
+  get "trail/search"
+  get "trail/index"
+
   resources :features
 
   # The priority is based upon order of creation:
