@@ -36,6 +36,7 @@ class TrailController < ApplicationController
         results = results.where{ avg_rating >= rating_gte }
     end 
 
+    results = results.select("id, title, avg_rating, photo_url, round_trip, elevation_gain")
     render :json => results
   end
 
