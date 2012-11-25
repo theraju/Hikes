@@ -14,8 +14,10 @@
 @interface HikeSearchResultsViewController : UITableViewController {
 NSArray *_tableViewArray;
 }
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *waitForSearchResults;
 
 @property (nonatomic, retain) NSArray *tableViewArray;
 @property (nonatomic, retain) HikeSearchCriteria *hikeSearchCriteria;
 @property (nonatomic, strong) HikeDataController *hikeDataController;
+
 @end

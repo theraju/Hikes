@@ -30,7 +30,8 @@
 {
     [super viewDidLoad];
     [self.hikeDataController clear];
-    NSMutableString *urlString = [NSMutableString stringWithString:@"http://192.168.42.116:3000/trail/search?"];
+    [self.waitForSearchResults startAnimating];
+    NSMutableString *urlString = [NSMutableString stringWithString:@"http://192.168.1.113:3000/trail/search?"];
     BOOL isFirst = TRUE;
     if (self.hikeSearchCriteria.distanceLessThan > 0) {
         [urlString appendFormat: @"roundtriplte=%d", self.hikeSearchCriteria.distanceLessThan];
@@ -43,7 +44,7 @@
             [urlString appendString: @"&"];
         }
         
-        [urlString appendFormat: @"elevgain=%d", self.hikeSearchCriteria.elevationGainLessThan];
+        [urlString appendFormat: @"elevgainlte=%d", self.hikeSearchCriteria.elevationGainLessThan];
         isFirst = FALSE;
     }
     NSURL *url = [NSURL URLWithString: [NSString stringWithString: urlString]];
@@ -62,6 +63,7 @@
                           
                           options:kNilOptions
                           error:&error];
+    [self.waitForSearchResults stopAnimating];
     //populate hikeDataController
     if (!jsonArray) {
         NSLog(@"Error parsing JSON: %@", error);
