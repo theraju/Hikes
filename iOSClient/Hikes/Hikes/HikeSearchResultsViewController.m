@@ -8,6 +8,7 @@
 
 #import "HikeSearchResultsViewController.h"
 #import "HikeDataController.h"
+#import "HikeDetailViewController.h"
 #import "Hike.h"
 
 @implementation HikeSearchResultsViewController
@@ -31,7 +32,9 @@
     [super viewDidLoad];
     [self.hikeDataController clear];
     [self.waitForSearchResults startAnimating];
-    NSMutableString *urlString = [NSMutableString stringWithString:@"http://192.168.1.113:3000/trail/search?"];
+    NSString *endpoint = (NSString *)[[NSBundle mainBundle] objectForInfoDictionaryKey: @"Server"];
+    NSMutableString *urlString = [NSMutableString stringWithString: endpoint];
+    [urlString appendString: @"trail/search?"];
     BOOL isFirst = TRUE;
     if (self.hikeSearchCriteria.distanceLessThan > 0) {
         [urlString appendFormat: @"roundtriplte=%d", self.hikeSearchCriteria.distanceLessThan];
@@ -69,7 +72,7 @@
         NSLog(@"Error parsing JSON: %@", error);
     } else {
         for(NSDictionary *item in jsonArray) {
-            Hike *hike = [[Hike alloc] initWithName:[item objectForKey:@"title"] distance:[(NSString *)[item objectForKey:@"round_trip"] floatValue] elevation:[(NSString *)[item objectForKey:@"elevation_gain"] intValue]];
+            Hike *hike = [[Hike alloc] initWithId:[(NSString *)[item objectForKey:@"id"] intValue]  name:[item objectForKey:@"title"] distance:[(NSString *)[item objectForKey:@"round_trip"] floatValue] elevation:[(NSString *)[item objectForKey:@"elevation_gain"] intValue]];
             [self.hikeDataController addHike:hike];
         }
         [self.tableView reloadData];
@@ -150,9 +153,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //self.selectedHike = [self.hikeDataController objectInListAtIndex:indexPath.row];
     // Navigation logic may go here. Create and push another view controller.
+     /*DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+      */
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    HikeDetailViewController *detailViewController = [[HikeDetailViewController alloc] init];
+    detailViewController.hike =
      // ...
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
@@ -168,5 +175,14 @@
 - (void)setSearchCriteria:(HikeSearchCriteria *)searchCriteria
 {
     self.hikeSearchCriteria = searchCriteria;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"ShowHikeDetails"])
+    {
+        HikeDetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.hike = [self.hikeDataController objectInListAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
 }
 @end

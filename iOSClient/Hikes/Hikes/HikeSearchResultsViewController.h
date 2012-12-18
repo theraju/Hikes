@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HikeSearchCriteria.h"
-#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+@class Hike;
 @class HikeDataController;
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
 @interface HikeSearchResultsViewController : UITableViewController {
 NSArray *_tableViewArray;
@@ -19,5 +20,6 @@ NSArray *_tableViewArray;
 @property (nonatomic, retain) NSArray *tableViewArray;
 @property (nonatomic, retain) HikeSearchCriteria *hikeSearchCriteria;
 @property (nonatomic, strong) HikeDataController *hikeDataController;
+//@property (nonatomic, weak) Hike *selectedHike;
 
 @end

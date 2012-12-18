@@ -9,12 +9,14 @@
 #import "Hike.h"
 
 @implementation Hike
--(id)initWithName:(NSString *)name distance:(float)distance elevation:(int)elevation {
+-(id)initWithId: (long) hikeId name:(NSString *)name distance:(float)distance elevation:(int)elevation {
     self = [super init];
     if (self) {
+        _id = hikeId;
         _name = name;
         _distance = distance;
         _elevation = elevation;
+        _hasDetails = false;
         return self;
     }
     
